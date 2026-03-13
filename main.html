@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт-портфолио профессионального фотографа. Свадебная, студийная и репортажная съемка.">
+    <title>Портфолио фотографа | Искусство в каждом кадре</title>
+    <style>
+        /* Базовые настройки и темная тема */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #121212; /* Темный фон для портфолио */
+        }
+
+        /* 1. Навигационное меню */
+        header {
+            background: #0a0a0a;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4af37; /* Золотой акцент */
+        }
+
+        /* Общие отступы для секций */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        /* 2. Секция с баннером */
+        #hero {
+            text-align: center;
+            padding: 8rem 2rem;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080/222222/555555?text=Фоновое+изображение') center/cover;
+            border-bottom: 1px solid #333;
+            margin-bottom: 2rem;
+        }
+
+        #hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: #aaa;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #hero a {
+            display: inline-block;
+            background: transparent;
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border: 1px solid #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        #hero a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* 3. Секция с контентом 1 (Услуги) */
+        .services-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        article {
+            background: #1e1e1e;
+            padding: 2.5rem;
+            flex: 1;
+            text-align: center;
+            border-top: 3px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        article:hover {
+            border-color: #d4af37;
+        }
+
+        article h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        article p {
+            color: #999;
+        }
+
+        /* 4. Секция с контентом 2 (Галерея-заглушка) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            background: #222;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* 5. Секция с формой */
+        form {
+            background: #1e1e1e;
+            padding: 3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #bbb;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            background: #121212;
+            border: 1px solid #333;
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #d4af37;
+            color: #000;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #b5952f;
+        }
+
+        /* 6. Подвал */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #0a0a0a;
+            color: #666;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#booking">Записаться</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Моменты в вечности</h1>
+            <p>Профессиональная фотосъемка: ловим искренние эмоции и создаем кадры, к которым хочется возвращаться.</p>
+            <a href="#booking">Обсудить съемку</a>
+        </section>
+
+        <section id="services">
+            <h2>Мои направления</h2>
+            <div class="services-grid">
+                <article>
+                    <h3>Свадебная съемка</h3>
+                    <p>Сохраняю историю вашего главного дня. Репортажные и постановочные кадры, обработка лучших снимков.</p>
+                </article>
+                <article>
+                    <h3>Студийный портрет</h3>
+                    <p>Индивидуальные фотосессии с профессиональным светом для раскрытия вашей личности и характера.</p>
+                </article>
+                <article>
+                    <h3>Street style</h3>
+                    <p>Живые кадры в ритме города. Идеально для соцсетей, личного бренда или просто для души.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Последние работы</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">Место для фото 1</div>
+                <div class="gallery-item">Место для фото 2</div>
+                <div class="gallery-item">Место для фото 3</div>
+                <div class="gallery-item">Место для фото 4</div>
+                <div class="gallery-item">Место для фото 5</div>
+                <div class="gallery-item">Место для фото 6</div>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2>Забронировать дату</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="client-name">Ваше имя:</label>
+                    <input type="text" id="client-name" name="name" required placeholder="Как к вам обращаться?">
+                </div>
+                <div class="form-group">
+                    <label for="client-contact">Телефон или Email:</label>
+                    <input type="text" id="client-contact" name="contact" required placeholder="+375 (99) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <label for="shoot-details">Какая съемка вас интересует?</label>
+                    <textarea id="shoot-details" name="details" rows="3" required placeholder="Например: Свадьба 15 августа, нужно 5 часов работы..."></textarea>
+                </div>
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Photographer Portfolio. Все права защищены.</p>
+        <p>Проект разработан студентом группы СИ441.16</p> 
+    </footer>
+
+</body>
+</html>
